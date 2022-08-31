@@ -45,6 +45,11 @@ body{
     justify-content: center;
     flex-direction: row;
 }
+textarea{  
+    overflow:hidden;
+    margin:50px auto;
+    display:block;
+}
 .text-input{
     background-color: #F3F5FC;
     float: left;
@@ -86,6 +91,8 @@ body{
     text-align: center;
     color: #495057;
     border: none;
+    resize: none;
+
 }
 #btn-encriptar{
     width: 40%;
