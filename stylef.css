@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 body{
     background: #F3F5FC;
+    display: grid;
+}
+#burs{
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
 }
 .container{
     display: flex;
@@ -8,6 +15,8 @@ body{
     padding: 0px;
     height: 650px;
     padding: 5px;
+    position: relative;
+    z-index: 99;
 }
 .left-container{
     width: 60%;
@@ -51,18 +60,27 @@ textarea{
     display:block;
 }
 .text-input{
-    background-color: #F3F5FC;
+    background-color: transparent;
     float: left;
     margin-left: 15%;
     margin-top: 5%;
     width: 90%;
-    height: 90%;
     border: none;
     font-family: 'Inter';
     font-style: normal;
     font-size: 30px;
-    color: #0A3871;
+    color: #0a0b0d;
     resize: none;
+}
+#txtresultado{
+    margin: auto;
+    width: 90%;
+    border: none;
+    font-family: 'Inter';
+    font-style: normal;
+    text-align: center;
+    font-size: 20px;
+    color: #0A3871;
 }
 #imgderecha{
     margin-left: 10%;
@@ -101,6 +119,7 @@ textarea{
     margin-left: 5%;
     background: #0A3871;
 }
+
 #btn-desencriptar{
     width: 40%;
     height: 70%;
@@ -109,11 +128,11 @@ textarea{
     background: #d8dee8;  
 }
 #copy{
-    margin-left: 30%;
-    padding: 24px;
-    width: 40%;
-    height: 10%;
-    background: #d8dee8;
+    margin-left: 11%;
+    width: 82%;
+    height: 7%;
+    background: transparent;
+    border: 1px solid #0A3871;
     border-radius: 24px;
     display: none;
 }
@@ -125,6 +144,11 @@ textarea{
     margin-left: 5%;
     font-size: 10px;
 }
+#btn-encriptar:hover, #btn-desencriptar:hover, #copy:hover{
+    border-color: orange;
+    transform: scale(1.1)
+}
+
 @media screen and (max-width:480px){
     .container{
         display: flex;
@@ -304,7 +328,6 @@ textarea{
         padding: 24px;
         width: 39%;
         height: 63%;
-        background: #d8dee8;
         border-radius: 24px;
         display: none;
         padding-left: 17%;
@@ -377,4 +400,161 @@ textarea{
         color: #495057;
         border: none;
     }
+    .left-button{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        width: 50%;
+        height: 80px;
+        left: 30px;
+        top: 600px;
+    }
 }
+/*burbujas"*/
+/*@media screen and (min-width: 600px){*/
+    .burbujas{
+        border-radius: 50%;
+        background: #d8dee8;
+        opacity: .3;
+
+        position: absolute;
+        bottom: 0;
+        animation: burbujas 3s linear infinite;
+    }
+    .burbujas:nth-child(1){
+        width: 80px;
+        height: 80px;
+        left: 5%;
+        animation-duration: 3s;
+        animation-delay: 3s;
+    }
+    .burbujas:nth-child(2){
+        width: 100px;
+        height: 100px;
+        left: 35%;
+        animation-duration: 3s;
+        animation-delay: 5s;
+    }
+    .burbujas:nth-child(3){
+        width: 20px;
+        height: 20px;
+        left: 15%;
+        animation-duration: 1.5s;
+        animation-delay: 7s;
+    }
+    .burbujas:nth-child(4){
+        width: 50px;
+        height: 50px;
+        left: 90%;
+        animation-duration: 6s;
+        animation-delay: 3s;
+    }
+    .burbujas:nth-child(5){
+        width: 70px;
+        height: 70px;
+        left: 65%;
+        animation-duration: 3s;
+        animation-delay: 1s;
+    }
+    .burbujas:nth-child(6){
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        animation-duration: 4s;
+        animation-delay: 5s;
+    }
+    .burbujas:nth-child(7){
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        animation-duration: 4s;
+        animation-delay: 5s;
+    }
+    .burbujas:nth-child(8){
+        width: 100px;
+        height: 100px;
+        left: 52%;
+        animation-duration: 5s;
+        animation-delay: 5s;
+    }
+    .burbujas:nth-child(9){
+        width: 65px;
+        height: 65px;
+        left: 51%;
+        animation-duration: 3s;
+        animation-delay: 2s;
+    }
+    .burbujas:nth-child(10){
+        width: 40px;
+        height: 40px;
+        left: 35%;
+        animation-duration: 3s;
+        animation-delay: 4s;
+    }
+    .burbujas:nth-child(11){
+        width: 20px;
+        height: 20px;
+        left: 15%;
+        animation-duration: 1.5s;
+        animation-delay: 7s;
+    }
+    .burbujas:nth-child(12){
+        width: 50px;
+        height: 50px;
+        left: 10%;
+        animation-duration: 6s;
+        animation-delay: 3s;
+    }
+    .burbujas:nth-child(13){
+        width: 70px;
+        height: 70px;
+        left: 3%;
+        animation-duration: 3s;
+        animation-delay: 1s;
+    }
+    .burbujas:nth-child(14){
+        width: 20px;
+        height: 20px;
+        left: 1%;
+        animation-duration: 4s;
+        animation-delay: 5s;
+    }
+    .burbujas:nth-child(15){
+        width: 20px;
+        height: 20px;
+        left: 50%;
+        animation-duration: 4s;
+        animation-delay: 5s;
+    }
+    #logoimg{
+        animation: movimiento 2.5s linear infinite;
+    }
+    @keyframes burbujas{
+        0%{
+            bottom: 0;
+            opacity: 0;
+        }
+        30%{
+            transform: translateX(30px);
+        }
+        50%{
+            opacity: .4;
+        }
+        100%{
+            bottom: 100vh;
+            opacity: 0;
+        }
+    }
+    @keyframes movimiento{
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(30px);
+        }
+        100%{
+            transform: translateY(0);
+        }
+    }
+/*}*/

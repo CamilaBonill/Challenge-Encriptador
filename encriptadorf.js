@@ -12,8 +12,8 @@ function autosize(){
 
 function encriptar(){
     var texto = document.getElementById("inputTexto").value;
-    var txtCifrado = texto.replace(/e/g, "enter").replace(/o/g,"ober")
-    .replace(/i/g,"imes").replace(/a/g,"ai").replace(/u/g,"ufat");
+    var txtCifrado = texto.replaceAll("e", "enter").replaceAll("o","ober")
+    .replaceAll("i","imes").replaceAll("a","ai").replaceAll("u","ufat");
 
     limpiador(txtCifrado)
      
@@ -22,8 +22,8 @@ function encriptar(){
 function deseencriptar(){
     var texto = document.getElementById("inputTexto").value;
 
-    var txtCifrado = texto.replace(/enter/g,"e").replace(/ober/g,"o")
-    .replace(/imes/g,"i").replace(/ai/g,"a").replace(/ufat/g,"u");
+    var txtCifrado = texto.replaceAll("enter","e").replaceAll("ober","o")
+    .replaceAll("imes","i").replaceAll("ai","a").replaceAll("ufat","u");
 
     limpiador(txtCifrado)
 
@@ -36,6 +36,8 @@ function limpiador(txtCifrado){
     document.getElementById("imgderecha").style.display ="none";
     document.getElementById("texto1").style.display ="none";
     document.getElementById("texto2").innerHTML = txtCifrado;
+    document.getElementById("texto2").style.display ="none";
+    document.getElementById("txtresultado").innerText = txtCifrado;
     document.getElementById("copy").style.display = "show"
     document.getElementById("copy").style.display = "inherit"
 }
