@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 body{
-    background: #F3F5FC;
-    display: grid;
+    background: #495057;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 #burs{
     height: 100vh;
@@ -13,6 +16,8 @@ body{
     display: flex;
     margin: 0px;
     padding: 0px;
+    width: 100%;
+    max-width: 1200px;
     height: 650px;
     padding: 5px;
     position: relative;
@@ -38,7 +43,8 @@ body{
     border-radius: 24px;
 }
 .right{
-    background: #ffffffff;
+    background-color: #ffffffb5;
+    backdrop-filter: blur(10px);
     float: right;
     width: 30%;
     height: auto;
@@ -65,6 +71,7 @@ textarea{
     margin-left: 15%;
     margin-top: 5%;
     width: 90%;
+    max-height: 90%;
     border: none;
     font-family: 'Inter';
     font-style: normal;
@@ -100,6 +107,7 @@ textarea{
 #texto2{
     width: 270px;
     height: auto;
+    background: transparent;
 
     font-family: 'Inter';
     font-style: normal;
@@ -144,6 +152,7 @@ textarea{
     margin-left: 5%;
     font-size: 10px;
 }
+
 #btn-encriptar:hover, #btn-desencriptar:hover, #copy:hover{
     border-color: orange;
     transform: scale(1.1)
@@ -204,7 +213,7 @@ textarea{
     }
     
     .right {
-        background: #fff;
+        
         float: right;
         width: 90%;
         height: auto;
@@ -302,7 +311,7 @@ textarea{
         display: none;
     }
     .right {
-        background: #fff;
+        
         float: right;
         width: 90%;
         height: auto;
@@ -335,7 +344,7 @@ textarea{
 }
 @media screen and (min-width:1000px) and (max-width:1200px){
     .right{
-        background: #ffffffff;
+        
         float: right;
         width: calc(100%/4);
         height: auto;
@@ -369,9 +378,8 @@ textarea{
 }
 @media screen and (min-width:1200px){
     .right{
-        background: #ffffffff;
         float: right;
-        width: calc(100%/5);
+        width: calc(100%/4);
         height: auto;
         border-radius: 24px;
         position: relative;
